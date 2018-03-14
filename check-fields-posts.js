@@ -1,7 +1,7 @@
 window.onload = function()
 {
     var postForm = document.getElementById('postForm');
-    postForm.onsubmit = function()
+    postForm.onsubmit = function(evt)
     {
         var title = document.getElementById('postTitle');
         var content = document.getElementById('postContent');
@@ -10,13 +10,13 @@ window.onload = function()
         if(!title.nodeValue)
         {
             var titleAlert = document.getElementById('titleAlert');
-            titleAlert.nodeValue = 'Please fill in the title of your post';
+            titleAlert.innerText = 'Please fill in the title of your post';
         }
         if(!content.nodeValue)
         {
             var contentAlert = document.getElementById('contentAlert');
-            contentAlert.nodeValue = 'Please fill in the title of your post';
+            contentAlert.innerText = 'Please fill in the title of your post';
         }
-        
+        evt.preventDefault();
     }
 }

@@ -3,3 +3,7 @@
     display: block;
     margin-bottom: 5px;
 }
+.alert
+{
+    color: red;
+}
