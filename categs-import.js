@@ -1,6 +1,6 @@
 var categs = document.getElementsByClassName('categs');
 var request = new XMLHttpRequest();
-request.open('GET', 'categs.json', true);
+request.open('GET', '../categs.json', true);
 request.onload = function()
 {
     var data = JSON.parse(this.response);

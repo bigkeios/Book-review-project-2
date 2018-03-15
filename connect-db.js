@@ -1,31 +1,34 @@
 // get the service of mysql
 var mysql = require('mysql');
-// credential to access db
+// function connect()
+// {
+//     this.pool = null;
+//     this.init = function()
+//     {
+//         this.pool = mysql.createPool(
+//             {
+//                 connectionLimit: 10,
+//                 host: 'localhost',
+//                 user: 'root',
+//                 password: 'IchgsmPW8*',
+//                 database: 'blogschema',
+//             }
+//         );
+//     };
+//     this.acquire = function(callback)
+//     {
+//         this.pool.getConnection(function(err, connection)
+//         {
+//            callback(err, connection) 
+//         });
+//     };
+// }
 var connection = mysql.createConnection(
     {
         host: 'localhost',
         user: 'root',
         password: 'IchgsmPW8*',
         database: 'blogschema',
-});
-// connect to the db
-connection.connect(function(err)
-{
-    if(err)
-    {
-        console.log(err.code);
     }
-});
-// //query
-// $query='SELECT * FROM Post';
-// connection.query($query, function(err, rows, fields)
-// {
-//     if(err)
-//     {
-//         console.log(err);
-//         return;
-//     }
-//     console.log('Query executed: ' + rows + ' rows');
-// });
-// // close the connection
-// connection.end();
+)
+module.exports = connection;

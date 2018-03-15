@@ -1,6 +1,6 @@
 var tags = document.getElementsByClassName('tags');
 var request = new XMLHttpRequest();
-request.open('GET', 'tags.json', true);
+request.open('GET', '../tags.json', true);
 request.onload = function()
 {
     var data = JSON.parse(this.response);

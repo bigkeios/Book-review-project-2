@@ -1,6 +1,6 @@
 var posts = document.getElementsByClassName('posts');
 var request = new XMLHttpRequest();
-request.open('GET', 'posts.json', true);
+request.open('GET', '../posts.json', true);
 request.onload = function()
 {
     var data = JSON.parse(this.response);
