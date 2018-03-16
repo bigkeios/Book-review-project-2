@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 //     console.log('Server is running at port '+ server.address().port);
 // });
 app.listen(8080);
-app.get('/home-view-index.html', function(req, res)
+app.get('/posts', function(req, res)
 {
     connection.query('SELECT * FROM post', function(err, rows, fields)
     {
